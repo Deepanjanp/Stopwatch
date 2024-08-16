@@ -1,0 +1,104 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dull_yellow"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital Stopwatch"
+        android:id="@+id/stopwatch_name"
+        android:layout_gravity="center"
+        android:textSize="@dimen/_30sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/name_bg"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white_silver"
+        android:layout_marginTop="@dimen/_40sdp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:layout_marginTop="@dimen/_87sdp"
+        android:id="@+id/timer_layout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/watch" />
+
+        <TextView
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:id="@+id/timer"
+            android:gravity="center"
+            android:textColor="@color/white_silver"
+            android:layout_marginTop="@dimen/_135sdp"
+            android:background="@color/black"
+            android:textSize="@dimen/_40sdp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timer_layout"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:text="START"
+            android:id="@+id/start"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:onClick="onClickStart"
+            android:background="@drawable/start_btn"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:textSize="@dimen/_27sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:text="PAUSE"
+            android:id="@+id/hold"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:onClick="onClickHold"
+            android:background="@drawable/hold_btn"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:textSize="@dimen/_27sdp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:text="RESET"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:onClick="onClickReset"
+            android:background="@drawable/stop_btn"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:textSize="@dimen/_27sdp"/>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
